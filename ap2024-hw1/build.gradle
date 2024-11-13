@@ -1,0 +1,25 @@
+// Automatically applies the java plugin as well
+apply plugin: 'application'
+
+
+mainClassName = "ConsoleGameMain"
+
+
+test {
+    reports {
+        junitXml.required = true
+        html.required = true
+    }
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use 'mavenCentral' for resolving your dependencies.
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+
